@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block css %}
+  <script language="Javascript" src="{% static 'jdl_web/js/mem_cherche.js'%}"></script>
+  <link rel="stylesheet" href="{% static 'jdl_web/css/mef.css'%}" />
+{% endblock %}
+
+{% block content %} 
+<div class="container">
+  <h2> J’invente Des Lieux </h2
+  <p>
+  À partir d’une commune française existante, générez des noms fictifs qui en connotent la localisation géographique !
+  </p>
+
+    {% if msg %}
+    <div class="alert alert-{{alert_type}}" role="alert">
+        {{msg}}
+    </div>
+    {% endif %}
+
+    <div class="">
+      {% crispy generation_form %}
+      <div id="prop" class="col-xs-4"></div>
+    </div>
+
+    {% if jdl_res %}
+    <div class="container">
+        {{jdl_res.city_name}} ({{jdl_res.dept}}, {{jdl_res.region}}) est une ville 
+        de {{jdl_res.taille}} habitants qui peut être anonymisée par
+        <ul>
+        {% for city in jdl_res.cities %}
+            <li>{{city}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+            <img class="card-img-top" src="{% static jdl_res.graph_taille %}" alt="">
+        </div>
+        <div class="col-sm">
+          <img class="card-img-top" src="{% static jdl_res.graph_tiret %}" alt="Card image cap">
+        </div>
+      </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

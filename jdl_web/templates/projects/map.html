@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %} 
+<div class="container">
+
+<h2>Carte des suffixes </h2>
+
+  <p>
+    L'algorithme a permis de créer cette carte de France des suffixes régionaux. En savoir plus <a href="https://shsoutsiders.wordpress.com/2021/02/05/un-nuage-des-sons-regionaux/">ici</a>
+  </p>  
+    
+
+<img src="{% static 'jdl_web/imgs/cartesuffixesjdlleger.jpg' %}" class="img-fluid" alt="{% trans 'La carte!' %}"/>
+</div>
+{% endblock %}

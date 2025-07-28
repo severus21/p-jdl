@@ -1,0 +1,31 @@
+{% load i18n %} 
+{% load static %}
+{% load crispy_forms_tags %}
+
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark justify-content-between ">
+    <a class="navbar-brand" href="/"><img width="300" src="{% static 'logo.jpg' %}" alt="JDL logo"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button> 
+
+    <div class="collapse navbar-collapse" id="navbarNav" style="font-size:x-large">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/contact"> {% trans "Contact" %}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/informations"> {% trans "Pourquoi JDL ?" %}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/methode"> {% trans "Méthode" %}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/carte"> {% trans "La carte" %}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/remerciements"> {% trans "Remerciements" %}</a>
+            </li>
+        </ul>
+    </div>
+</nav>   

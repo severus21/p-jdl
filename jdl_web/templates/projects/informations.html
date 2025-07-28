@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %} 
+<div class="container">
+
+    <h2>Démarche</h2>
+
+    <p> La question de l'anonymisation ou de la pseudonymisation en sciences sociales fait l'objet de nombreuses réflexions. Elle n'a pas uniquement un but déontologique (rendre incognitos les personnes enquêté-e-s). Anonymiser est aussi une opération sociologique : les sujets que l'on étudie ont un sens, une épaisseur sociale, qu'il est souvent pertinent de connoter dans l'analyse. </p> 
+
+    <p>
+    Cependant, les études sur les manières d'anonymiser se sont pour la plupart focalisées sur les individus et très rarement sur les lieux. Dans les travaux ethnographiques, la ville où se déroule l'enquête est désignée par une simple initiale, ou un nom inventé sans que soit explicité ce choix. 
+    </p>  
+    
+
+    <p>
+    L'outil JDL propose une aide à l'anonymisation des noms de villes. À partir d'un découpage des noms de villes existantes en préfixes et suffixes caractéristiques d'une région, voire d'un département, l'algorithme crée un nom imaginaire. La conception est donc plus toponymique que sociologique, mais se justifie si on prend en compte le fait que la toponymie française implique des rapports symboliques entre les villes ainsi désignées. Enghien-les-Bains en région parisienne n'est pas Laujuzan dans le Gers. En somme, l'espace géographique est lui aussi soumis à des dynamiques de classement, à des « effets de lieux » (Bourdieu, <em>La Misère du monde</em>).
+    </p>  
+
+
+    <p>
+    Cet outil ne demande qu'à être amélioré ! J'invite à signaler tout bug via la page <a href="contact.html">Contact</a> ! 
+    </p>  
+
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+Django==5.2.4
+pandas
+numpy
+matplotlib
+unidecode
+
+django-crispy-forms
+crispy-bootstrap4
+
+gunicorn

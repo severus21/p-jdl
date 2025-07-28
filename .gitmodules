@@ -1,0 +1,3 @@
+[submodule "jdl_web/jdl_core"]
+        path = jdl_web/jdl_core
+        url = https://github.com/JuliaDescamps/JDL.git 
